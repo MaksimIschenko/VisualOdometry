@@ -127,8 +127,8 @@ if __name__ == "__main__":
         imgpoints.append(imgp)
 
         # Опционально. Отрисовка углов на исх. изображении
-        # img = draw_corners(img, objp, imgp)
-        # display_image(img)
+        img = draw_corners(img, objp, imgp)
+        display_image(img)
 
     # Получение параметров камеры
     params = get_camera_param(imgp=imgpoints,
@@ -136,4 +136,4 @@ if __name__ == "__main__":
                               image=img_to_calib[-1])
 
     # Запись параметров в json файл
-    write_to_json(params, './src/camera_matrix.json')
+    write_to_json(params, '../src/camera_matrix.json')
